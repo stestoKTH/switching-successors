@@ -187,22 +187,47 @@
   <div class="container is-max-desktop">
     <!-- Framework. -->
     <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-four-fifths"> -->
-        <div class="column is-full-width">
+      <div class="column is-full-width">
+
         <h2 class="title is-3">Framework of Switching Successor Measures</h2>
+
         <div class="content has-text-justified">
 
           <p>
-            TODO
+            Consider an agent solving a long-horizon task defined by a reward function \(r\). Rather than optimizing the task globally from the outset, we study a hierarchical strategy in which the agent first selects an intermediate subgoal \(w\), follows a local policy toward that subgoal, and subsequently switches back to a globally efficient policy.
+          </p>
+
+          <p>
+            This perspective leads to the notion of a <i>switching successor measure</i>, which models the future occupancy distribution induced by switching policies at an intermediate state. Our key observation is that hierarchical structure is already implicitly encoded inside classical successor measures. In particular, we show that switching successor measures can be derived directly from standard successor representations without requiring additional hierarchical training objectives or supervision.
           </p>
 
           <div class="has-text-centered">
-            <img src="./static/images/main_thm.SVG" alt="Main theorem for switching successor measures" style="max-width: 60%; height: auto;">
+            <img src="./static/images/main_thm.SVG"
+                 alt="Main theorem for switching successor measures"
+                 style="max-width: 60%; height: auto; margin-top: 20px; margin-bottom: 10px;">
           </div>
 
+          <p>
+            The theorem above formalizes the relationship between classical successor measures and their hierarchical switching counterpart. It shows that standard successor representations already contain sufficient information to reason about intermediate subgoals and policy switching. As a consequence, hierarchy does not need to be learned as a separate mechanism, but instead emerges naturally from the structure of the representation itself.
+          </p>
+
+          <p>
+            Building on this result, we introduce a <i>switching advantage function</i> that quantifies whether switching through a subgoal improves long-horizon performance relative to directly following the global policy.
+          </p>
+
           <div class="has-text-centered">
-            <img src="./static/images/adv_thm.svg" alt="Main theorem for switching advantage functions" style="max-width: 60%; height: auto;">
+            <img src="./static/images/adv_thm.svg"
+                 alt="Main theorem for switching advantage functions"
+                 style="max-width: 75%; height: auto; margin-top: 20px; margin-bottom: 10px;">
           </div>
+
+          <p>
+            The switching advantage provides a principled criterion for selecting useful intermediate states. Unlike prior hierarchical reinforcement learning approaches, our framework does not rely on fixed subgoal horizons, naturally supports general reward functions beyond navigation settings, and allows subgoals to emerge directly from the learned representation.
+          </p>
+
+          <p>
+            Together, these results establish that hierarchical planning can be recovered directly from standard successor measures, enabling hierarchical zero-shot reinforcement learning without additional hierarchy-specific learning procedures.
+          </p>
 
         </div>
       </div>

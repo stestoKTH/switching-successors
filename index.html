@@ -182,11 +182,11 @@
           </p>
 
           <p>
-            Building on this idea, we propose FB π-Switch, a hierarchical zero-shot reinforcement learning algorithm that supports arbitrary reward functions, does not require fixed subgoal horizons, and learns hierarchical behavior without additional supervision.
+            Building on this idea, we propose FB $\pi$-Switch, a hierarchical zero-shot reinforcement learning algorithm that supports arbitrary reward functions, does not require fixed subgoal horizons, and learns hierarchical behavior without additional supervision.
           </p>
 
           <p>
-            FB π-Switch achieves strong performance on both goal-conditioned tasks and more general reward-based environments.
+            FB $\pi$-Switch achieves strong performance on both goal-conditioned tasks and more general reward-based environments.
           </p>
 
         </div>
@@ -259,21 +259,24 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
 
-        <h2 class="title is-3">A practical algorithm for hierarchical RL: FB π-Switch</h2>
+        <h2 class="title is-3">A practical algorithm for hierarchical RL: FB $\pi$-Switch</h2>
 
         <div class="content has-text-justified">
 
           <p>
-            We instantiate switching successor measures within the forward–backward reinforcement learning framework, yielding FB π-Switch for hierarchical zero-shot control.
-            The approach first learns reward-conditioned successor representations via action-free expectile regression, encoding long-horizon dynamics and transferable structure.
-            A high-level policy then performs planning in representation space by selecting latent subgoals that maximize the switching advantage.
-            A low-level controller is trained to execute actions conditioned on these subgoals.
-            At test time, the high-level policy proposes subgoals while the low-level policy executes them, enabling hierarchical generalization from a single representation.
+            We instantiate switching successor measures within the forward–backward reinforcement learning framework, yielding FB $\pi$-Switch for hierarchical zero-shot control.
           </p>
 
           <div class="has-text-centered">
             <img src="./static/images/figure_algo.svg" alt="FB π-Switch algorithm overview" style="max-width: 80%; height: auto;">
           </div>
+
+          <p>
+            The approach first learns reward-conditioned successor representations via action-free expectile regression, encoding long-horizon dynamics and transferable structure.
+            A high-level policy then performs planning in representation space by selecting latent subgoals that maximize the switching advantage.
+            A low-level controller is trained to execute actions conditioned on these subgoals.
+            At test time, the high-level policy proposes subgoals while the low-level policy executes them, enabling hierarchical generalization from a single representation.
+          </p>
 
         </div>
       </div>
@@ -295,44 +298,8 @@
             TODO
           </p>
 
-        </div>
-      </div>
-    </div>
-    <!--/ Experimental results. -->
-</section>
 
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Takeaways. -->
-    <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-four-fifths"> -->
-        <div class="column is-full-width">
-        <h2 class="title is-3">Takeaways</h2>
-        <div class="content has-text-justified">
-
-          <p>
-            TODO
-          </p>
-
-        </div>
-      </div>
-    </div>
-    s<!--/ Takeaways. -->
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
+                  <!-- Interpolating. -->
         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
@@ -366,14 +333,35 @@
         <br/>
         <!--/ Interpolating. -->
 
-
+        </div>
       </div>
     </div>
-    <!--/ Animation. -->
-
-
-  </div>
+    <!--/ Experimental results. -->
 </section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Takeaways. -->
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full-width">
+        <h2 class="title is-3">Takeaways</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            TODO
+          </p>
+
+        </div>
+      </div>
+    </div>
+    s<!--/ Takeaways. -->
+</section>
+
+
+
 
 
 <section class="section" id="BibTeX">

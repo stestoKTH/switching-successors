@@ -140,7 +140,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Switching successor measures</span> enable hierarchical zero-shot reinforcement learning, where agent can decompose complex tasks into smaller subproblems without losing global effectiveness.
+       Switching successor measures enable hierarchical zero-shot reinforcement learning, where agent can decompose complex tasks into smaller subproblems without losing global effectiveness.
       </h2>
 
       <div class="has-text-centered">
@@ -304,8 +304,8 @@
 
  
           <p>
-            We evaluate FB π-Switch on AntMaze, a challenging continuous-control benchmark that requires both long-horizon planning and complex locomotion. 
-            Across multiple maze environments, FB π-Switch achieves performance comparable to specialized goal-conditioned methods while consistently benefiting 
+            <strong>Goal-reaching tasks.</strong> We evaluate FB $\pi$-Switch on AntMaze, a challenging continuous-control benchmark that requires both long-horizon planning and complex locomotion. 
+            Across multiple maze environments, FB $\pi$-Switch achieves performance comparable to specialized goal-conditioned methods while consistently benefiting 
             from hierarchical structure. Even without a high-level policy, the learned representations outperform other non-hierarchical baselines, highlighting the
              strength of switching successor measures for zero-shot control.
           </p>
@@ -349,7 +349,7 @@
 
       
         <p>
-          We evaluate FB $\pi$-Switch on extended AntMaze tasks with distributed rewards defined over multiple spatial regions, creating challenging long-horizon planning 
+          <strong>General reward tasks.</strong> We evaluate FB $\pi$-Switch on extended AntMaze tasks with distributed rewards defined over multiple spatial regions, creating challenging long-horizon planning 
           problems beyond standard goal-reaching benchmarks. FB $\pi$-Switch achieves the strongest overall performance and remains robust across both Large and Giant mazes.
           Unlike goal-conditioned approaches designed for single-target rewards, our framework naturally handles distributed reward landscapes, enabling composition of
           behaviors across regions and improved performance on more general tasks.

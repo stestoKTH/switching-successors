@@ -264,7 +264,11 @@
         <div class="content has-text-justified">
 
           <p>
-            TODO
+            We instantiate switching successor measures within the forward–backward reinforcement learning framework, yielding FB π-Switch for hierarchical zero-shot control.
+            The approach first learns reward-conditioned successor representations via action-free expectile regression, encoding long-horizon dynamics and transferable structure.
+            A high-level policy then performs planning in representation space by selecting latent subgoals that maximize the switching advantage.
+            A low-level controller is trained to execute actions conditioned on these subgoals.
+            At test time, the high-level policy proposes subgoals while the low-level policy executes them, enabling hierarchical generalization from a single representation.
           </p>
 
           <div class="has-text-centered">

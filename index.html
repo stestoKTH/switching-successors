@@ -415,6 +415,7 @@
         <img
           id="reward-svg"
           src="./static/images/rewards_large_1.svg"
+          alt=""
           style="max-width: 60%; height: auto;"
         >
 
@@ -451,65 +452,6 @@ function updateRewardSVG() {
   </div>
 </section>
 
-
-
-<!-- 
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <h2 class="title is-4 has-text-centered">
-      Reward Landscapes
-    </h2>
-
-    <!-- Controls -->
-    <div class="has-text-centered" style="margin-bottom: 1rem;">
-
-      <!-- Maze selector -->
-      <label for="maze-select"><strong>Maze:</strong></label>
-      <select id="maze-select" onchange="updateRewardSVG()">
-        <option value="large">Large</option>
-        <option value="giant">Giant</option>
-      </select>
-
-      &nbsp;&nbsp;&nbsp;
-
-      <!-- Task selector -->
-      <label for="task-select"><strong>Task:</strong></label>
-      <select id="task-select" onchange="updateRewardSVG()">
-        <option value="1">Task 1</option>
-        <option value="2">Task 2</option>
-        <option value="3">Task 3</option>
-        <option value="4">Task 4</option>
-        <option value="5">Task 5</option>
-      </select>
-
-    </div>
-
-    <!-- SVG display -->
-    <div class="has-text-centered">
-
-      <img
-        id="reward-svg"
-        src="./static/images/rewards_large_1.svg"
-        alt="Reward landscape"
-        style="max-width: 30%; height: auto;"
-      >
-
-    </div>
-
-  </div>
-</section>
-
-<script>
-function updateRewardSVG() {
-  const maze = document.getElementById("maze-select").value;
-  const task = document.getElementById("task-select").value;
-
-  const svgPath = `./static/images/rewards_${maze}_${task}.svg`;
-
-  document.getElementById("reward-svg").src = svgPath;
-}
-</script> -->
 
 
 <section class="section">

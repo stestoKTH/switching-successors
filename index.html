@@ -302,16 +302,18 @@
         <h2 class="title is-3">Experimental results</h2>
         <div class="content has-text-justified">
 
+ 
+          <p>
+            We evaluate FB π-Switch on AntMaze, a challenging continuous-control benchmark that requires both long-horizon planning and complex locomotion. 
+            Across multiple maze environments, FB π-Switch achieves performance comparable to specialized goal-conditioned methods while consistently benefiting 
+            from hierarchical structure. Even without a high-level policy, the learned representations outperform other non-hierarchical baselines, highlighting the
+             strength of switching successor measures for zero-shot control.
+          </p>
           <div class="has-text-centered">
             <img src="./static/images/table_GCRL.svg" alt="Average success rate on goal-conditioned RL tasks" style="max-width: 130%; height: auto;">
           </div>
-          <p>
-            TODO
-          </p>
 
-          <div class="has-text-centered">
-            <img src="./static/images/double_graph.svg" alt="Average performance on general reward tasks" style="max-width: 85%; height: auto;">
-          </div>
+          
 
                   <!-- Interpolating. -->
         <div class="content has-text-justified">
@@ -341,6 +343,18 @@
         <br/>
         <!--/ Interpolating. -->
 
+
+
+        
+        <div class="has-text-centered">
+          <img src="./static/images/double_graph.svg" alt="Average performance on general reward tasks" style="max-width: 85%; height: auto;">
+        </div>
+        <p>
+          We evaluate FB $\pi$-Switch on extended AntMaze tasks with distributed rewards defined over multiple spatial regions, creating challenging long-horizon planning 
+          problems beyond standard goal-reaching benchmarks. FB $\pi$-Switch achieves the strongest overall performance and remains robust across both Large and Giant mazes.
+          Unlike goal-conditioned approaches designed for single-target rewards, our framework naturally handles distributed reward landscapes, enabling composition of
+          behaviors across regions and improved performance on more general tasks.
+        </p>
         </div>
       </div>
     </div>

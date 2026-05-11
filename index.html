@@ -278,6 +278,14 @@
             At test time, the high-level policy proposes subgoals while the low-level policy executes them, enabling hierarchical generalization from a single representation.
           </p>
 
+          <p>
+            Most importantly, this representation enables us to approximate switching advantage function as follows:
+            \begin{align*}
+                A_{\mathrm{FB}} (s,w,z) := F(s,z_w)^\top z +  \frac{F(s,z_w)^\top z_w }{F(w,z_w)^\top z_w} \Big( F(w, z) - F(w,z_w) \Big)^\top z - F(s,z)^\top z
+            \end{align*}
+            This implies that switching advantage function can directly be maximized from learned representation.
+          </p>
+
         </div>
       </div>
     </div>
@@ -300,13 +308,7 @@
 
 
                   <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">

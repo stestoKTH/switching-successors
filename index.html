@@ -378,7 +378,7 @@
 
       <!-- Maze selector -->
       <label for="maze-select"><strong>Maze:</strong></label>
-      <select id="maze-select" onchange="updateRewardPDF()">
+      <select id="maze-select" onchange="updateRewardSVG()">
         <option value="large">Large</option>
         <option value="giant">Giant</option>
       </select>
@@ -387,7 +387,7 @@
 
       <!-- Task selector -->
       <label for="task-select"><strong>Task:</strong></label>
-      <select id="task-select" onchange="updateRewardPDF()">
+      <select id="task-select" onchange="updateRewardSVG()">
         <option value="1">Task 1</option>
         <option value="2">Task 2</option>
         <option value="3">Task 3</option>
@@ -397,14 +397,15 @@
 
     </div>
 
-    <!-- PDF viewer -->
+    <!-- SVG display -->
     <div class="has-text-centered">
 
-      <iframe
-        id="reward-pdf"
-        src="./static/images/rewards_large_1.pdf"
-        style="width: 90%; height: 650px; border: none; border-radius: 12px;">
-      </iframe>
+      <img
+        id="reward-svg"
+        src="./static/images/rewards_large_1.svg"
+        alt="Reward landscape"
+        style="max-width: 90%; height: auto;"
+      >
 
     </div>
 
@@ -412,13 +413,13 @@
 </section>
 
 <script>
-function updateRewardPDF() {
+function updateRewardSVG() {
   const maze = document.getElementById("maze-select").value;
   const task = document.getElementById("task-select").value;
 
-  const pdfPath = `./static/images/rewards_${maze}_${task}.pdf`;
+  const svgPath = `./static/images/rewards_${maze}_${task}.svg`;
 
-  document.getElementById("reward-pdf").src = pdfPath;
+  document.getElementById("reward-svg").src = svgPath;
 }
 </script>
 

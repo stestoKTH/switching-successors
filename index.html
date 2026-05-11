@@ -348,16 +348,14 @@
 
 
       
-        <p>
+        <!-- <p>
           <strong>General reward tasks.</strong> We evaluate FB $\pi$-Switch on extended AntMaze tasks with distributed rewards defined over multiple spatial regions, creating challenging long-horizon planning 
           problems beyond standard goal-reaching benchmarks. FB $\pi$-Switch achieves the strongest overall performance and remains robust across both Large and Giant mazes.
           Unlike goal-conditioned approaches designed for single-target rewards, our framework naturally handles distributed reward landscapes, enabling composition of
           behaviors across regions and improved performance on more general tasks.
-        </p>
+        </p> -->
 
-        <div class="has-text-centered">
-          <img src="./static/images/double_graph.svg" alt="Average performance on general reward tasks" style="max-width: 85%; height: auto;">
-        </div>
+
 
 
         </div>
@@ -366,6 +364,84 @@
     <!--/ Experimental results. -->
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-vcentered">
+
+      <!-- LEFT: text -->
+      <div class="column is-half">
+        <p>
+          <strong>General reward tasks.</strong>
+          We evaluate FB $\pi$-Switch on extended AntMaze tasks with distributed rewards defined over multiple spatial regions,
+          creating challenging long-horizon planning problems beyond standard goal-reaching benchmarks.
+          FB $\pi$-Switch achieves the strongest overall performance and remains robust across both Large and Giant mazes.
+          Unlike goal-conditioned approaches designed for single-target rewards, our framework naturally handles distributed reward landscapes,
+          enabling composition of behaviors across regions and improved performance on more general tasks.
+        </p>
+      </div>
+
+      <!-- RIGHT: interactive figure -->
+      <div class="column is-half has-text-centered">
+
+        <h2 class="title is-4">
+          Reward Landscapes
+        </h2>
+
+        <!-- Controls -->
+        <div style="margin-bottom: 1rem;">
+
+          <label for="maze-select"><strong>Maze:</strong></label>
+          <select id="maze-select" onchange="updateRewardSVG()">
+            <option value="large">Large</option>
+            <option value="giant">Giant</option>
+          </select>
+
+          &nbsp;&nbsp;&nbsp;
+
+          <label for="task-select"><strong>Task:</strong></label>
+          <select id="task-select" onchange="updateRewardSVG()">
+            <option value="1">Task 1</option>
+            <option value="2">Task 2</option>
+            <option value="3">Task 3</option>
+            <option value="4">Task 4</option>
+            <option value="5">Task 5</option>
+          </select>
+
+        </div>
+
+        <!-- SVG -->
+        <img
+          id="reward-svg"
+          src="./static/images/rewards_large_1.svg"
+          alt="Reward landscape"
+          style="max-width: 100%; height: auto;"
+        >
+
+      </div>
+
+      <div class="has-text-centered">
+        <img src="./static/images/double_graph.svg" alt="Average performance on general reward tasks" style="max-width: 85%; height: auto;">
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+function updateRewardSVG() {
+  const maze = document.getElementById("maze-select").value;
+  const task = document.getElementById("task-select").value;
+
+  const svgPath = `./static/images/rewards_${maze}_${task}.svg`;
+
+  document.getElementById("reward-svg").src = svgPath;
+}
+</script>
+
+
+<!-- 
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -421,7 +497,7 @@ function updateRewardSVG() {
 
   document.getElementById("reward-svg").src = svgPath;
 }
-</script>
+</script> -->
 
 
 <section class="section">

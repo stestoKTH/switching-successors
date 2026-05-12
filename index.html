@@ -186,7 +186,7 @@
           </p>
 
           <p>
-            FB $\pi$-Switch achieves strong performance on both goal-conditioned tasks and more general reward-based environments.
+            FB $\pi$-Switch achieves strong performance on both goal-reaching and tasks defined by more general reward functions.
           </p>
 
         </div>
@@ -207,11 +207,16 @@
         <div class="content has-text-justified">
 
           <p>
-            Consider an agent solving a long-horizon task defined by a reward function \(r\). Rather than optimizing the task globally from the outset, we study a hierarchical strategy in which the agent first selects an intermediate subgoal \(w\), follows a local policy toward that subgoal, and subsequently switches back to a globally efficient policy.
+            Consider an agent solving a long-horizon task defined by a reward function \(r\). Rather than optimizing the task globally from the outset, we study a 
+            hierarchical strategy in which the agent first selects an intermediate subgoal \(w\), follows a local policy toward that subgoal, and subsequently switches 
+            back to a globally efficient policy.
           </p>
 
           <p>
-            This perspective leads to the notion of a <i>switching successor measure</i>, which models the future occupancy distribution induced by switching policies at an intermediate state. Our key observation is that hierarchical structure is already implicitly encoded inside classical successor measures. In particular, we show that switching successor measures can be derived directly from standard successor representations without requiring additional hierarchical training objectives or supervision.
+            This perspective leads to the notion of a <i>switching successor measure</i>, which models the future occupancy distribution induced by switching policies at 
+            an intermediate state. Our key observation is that hierarchical structure is already implicitly encoded inside classical successor measures. In particular, 
+            we show that switching successor measures can be derived directly from standard successor representations without requiring additional hierarchical training 
+            objectives or supervision. Our main theorem shows the following equivalence:
           </p>
 
           <div class="has-text-centered">
@@ -224,11 +229,14 @@
             <!-- $$
               M^{\pi_{w} \to \pi}_s(s') = M^{\pi_w}_s(s') + \frac{M^{\pi_w}_s(w)}{M^{\pi_w}_w(w)} \Big( M^{\pi}_w(s') -  M^{\pi_w}_w(s') \Big).
             $$ -->
-            The theorem above formalizes the relationship between classical successor measures and their hierarchical switching counterpart. It shows that standard successor representations already contain sufficient information to reason about intermediate subgoals and policy switching. As a consequence, hierarchy does not need to be learned as a separate mechanism, but instead emerges naturally from the structure of the representation itself.
+            This theorem formalizes the relationship between classical successor measures and their hierarchical switching counterpart. It shows that standard successor
+             representations already contain sufficient information to reason about intermediate subgoals and policy switching. As a consequence, hierarchy does not need 
+             to be learned as a separate mechanism, but instead emerges naturally from the structure of the representation itself.
           </p>
 
           <p>
-            Building on this result, we introduce a <i>switching advantage function</i> that quantifies whether switching through a subgoal improves long-horizon performance relative to directly following the global policy.
+            Building on this result, we introduce a <i>switching advantage function</i> that quantifies whether switching through a subgoal improves long-horizon performance
+             relative to directly following the global policy. As a straightforward consequence of our main theorem, we have:
             \begin{align*}
               A_s^{\pi_w \to \pi}(r) =  V^{\pi_{w}}(s;r) +  \frac{M^{\pi_{w}}_s(w)}{M^{\pi_{w}}_w(w)} \Big( V^\pi(w;r) - V^{\pi_{w}}(w;r)\Big) - V^\pi(s;r)
            \end{align*}
